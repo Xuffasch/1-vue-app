@@ -1,16 +1,22 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello from my first Vite/Vue app" />
+  <HelloWorld :input="message" />
 </template>
 
-<script>
+<script lang="ts">
+  import { defineComponent } from 'vue'
   import HelloWorld from './components/HelloWorld.vue'
-  export default {
+  export default defineComponent({
     name: "1-vue-app",
     components: {
       HelloWorld
+    },
+    data() {
+      return {
+        message: { msg: "Live from Vite/Typescript/Vue - VTV !", version: 1}
+      }
     }
-  }
+  })
 </script>
 
 <style>
