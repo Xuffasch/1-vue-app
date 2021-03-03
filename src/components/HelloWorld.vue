@@ -1,18 +1,17 @@
 <template>
-  <h1 class="title">{{ input.msg }}</h1>
-  <p>Version : {{ input.version }}</p>
+  <h1 class="title">{{ input?.msg ?? 'Welcome' }}</h1>
+  <p>Version : {{ input?.version ?? '0' }}</p>
 </template>
 
 <script lang="ts">
   import { defineComponent, PropType } from 'vue'
   import { Hello } from '../types'
-  export default defineComponent ({
+
+  export default defineComponent({
+    name: 'HelloWorld',
     props: {
-      input: {
-        type: Object as PropType<Hello>,
-        required: true,
-      }
-    }
+      input: Object as PropType<Hello>,
+    },
   })
 </script>
 
