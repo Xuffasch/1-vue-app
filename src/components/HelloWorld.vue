@@ -1,6 +1,8 @@
 <template>
-  <h1 class="title">{{ input?.msg ?? 'Welcome' }}</h1>
-  <p>Version : {{ input?.version ?? '0' }}</p>
+  <h1 class="title">
+    {{ input.msg }}
+  </h1>
+  <p>Version : {{ input.version }}</p>
 </template>
 
 <script lang="ts">
@@ -10,7 +12,10 @@
   export default defineComponent({
     name: 'HelloWorld',
     props: {
-      input: Object as PropType<Hello>,
+      input: {
+        type: Object as PropType<Hello>,
+        default: { msg: "", version: "" }
+      }
     },
   })
 </script>

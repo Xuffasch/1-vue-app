@@ -1,8 +1,8 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld :input="message" />
   <HelloList :hellos="hellos" />
-  <HelloForm @hello-sent="receivedHello"></HelloForm>
+  <HelloForm @hello-sent="receivedHello" />
 </template>
 
 <script lang="ts">
@@ -12,7 +12,7 @@ import HelloForm from "./components/HelloForm.vue";
 import HelloList from "./components/HelloList.vue";
 import { HelloComment, Hello } from "./types";
 export default defineComponent({
-  name: "1-vue-app",
+  name: "1VueApp",
   components: {
     HelloWorld,
     HelloForm,

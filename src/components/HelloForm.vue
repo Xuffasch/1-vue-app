@@ -1,16 +1,25 @@
 <template>
   <form @submit.prevent="onSubmit">
     <label for="comment">Comment:</label>
-    <textarea id="comment" v-model="comment"></textarea>
+    <textarea
+      id="comment"
+      v-model="comment"
+    />
 
     <label for="feeling">Feeling ?</label>
-    <select id="feeling" v-model="feeling">
+    <select
+      id="feeling"
+      v-model="feeling"
+    >
       <option>Great !</option>
       <option>So far, so good</option>
       <option>Bored !</option>
     </select>
 
-    <input type="submit" value="Submit" />
+    <input
+      type="submit"
+      value="Submit"
+    >
   </form>
 </template>
 
@@ -18,13 +27,13 @@
 import { defineComponent } from "vue";
 import { HelloComment } from "../types";
 export default defineComponent({
+  emits: ["hello-sent"],
   data() {
     return {
       comment: "" as string,
       feeling: "" as string,
     };
   },
-  emits: ["hello-sent"],
   methods: {
     onSubmit() {
       let hello = {
