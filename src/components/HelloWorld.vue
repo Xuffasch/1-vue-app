@@ -14,8 +14,8 @@
     props: {
       input: {
         type: Object as PropType<Hello>,
-        default: { msg: "", version: "" }
-      }
+        default: { msg: '', version: '' },
+      },
     },
   })
 </script>
