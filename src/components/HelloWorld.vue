@@ -2,7 +2,6 @@
   <h1 class="title">
     {{ input.msg }}
   </h1>
-  <p>Version : {{ input.version }}</p>
 </template>
 
 <script lang="ts">
@@ -14,7 +13,7 @@
     props: {
       input: {
         type: Object as PropType<Hello>,
-        default: { msg: '', version: '' },
+        default: { msg: '' },
       },
     },
   })
@@ -22,6 +21,6 @@
 
 <style>
   .title {
-    @apply p-2 m-2 font-bold text-gray-700;
+    @apply p-2 mx-auto text-center font-bold text-gray-700;
   }
 </style>

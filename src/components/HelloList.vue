@@ -1,5 +1,5 @@
 <template>
-  <h2>Received list of Hellos</h2>
+  <h2>Vos suggestions</h2>
   <ul>
     <li v-for="(hello, index) in hellos" :key="index">
       {{ hello.comment }} - {{ hello.feeling }}
@@ -20,3 +20,9 @@
     },
   })
 </script>
+
+<style scoped>
+  * {
+    @apply text-center;
+  }
+</style>

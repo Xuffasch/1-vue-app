@@ -53,6 +53,9 @@
   label {
     @apply my-4;
   }
+  select {
+    @apply h-8;
+  }
   input:last-child {
     @apply my-8 h-16 bg-green-500 text-white font-black text-2xl;
   }
