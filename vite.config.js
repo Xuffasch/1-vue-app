@@ -9,4 +9,10 @@ export default defineConfig({
   server: {
     port: 3010,
   },
+  resolve: {
+    alias: {
+      // Added to handle template for the FadeBanner component
+      vue: 'vue/dist/vue.esm-bundler.js',
+    },
+  },
 })

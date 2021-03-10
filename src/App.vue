@@ -1,14 +1,19 @@
 <template>
   <MainNavigation />
+  <FadeBanner />
   <router-view :key="$route.path" />
 </template>
 
 <script lang="ts">
   import MainNavigation from './components/MainNavigation.vue'
+  import FadeBanner from './components/FadeBanner.vue'
   import { defineComponent } from 'vue'
   export default defineComponent({
     name: 'AlbumComics',
-    components: { MainNavigation },
+    components: {
+      MainNavigation,
+      FadeBanner,
+    },
   })
 </script>
 
