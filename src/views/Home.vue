@@ -26,6 +26,11 @@
         hellos: [] as HelloComment[],
       }
     },
+    beforeCreate: function () {
+      document.body.className = 'home'
+      let nav = document.getElementsByTagName('NAV')[0]
+      nav.className = 'home'
+    },
     methods: {
       receivedHello(hello: HelloComment) {
         console.log('Received Hello Content : ', hello)

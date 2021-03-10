@@ -1,0 +1,23 @@
+body.home {
+    @apply bg-yellow-400;
+}
+
+body.list {
+    @apply bg-gray-400;
+}
+
+body.versus {
+    @apply bg-white;
+}
+
+nav.home {
+    @apply text-white;
+}
+
+nav.versus {
+    @apply text-albumBlue;
+}
+
+nav.list {
+    @apply text-red-300;
+}

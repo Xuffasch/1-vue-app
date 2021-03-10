@@ -11,10 +11,19 @@
   import { defineComponent } from 'vue'
   export default defineComponent({
     name: 'List',
+    beforeCreate: function () {
+      document.body.className = 'list'
+      let nav = document.getElementsByTagName('NAV')[0]
+      nav.className = 'list'
+    },
   })
 </script>
 
 <style scoped>
+  body {
+    @apply bg-yellow-400;
+  }
+
   h1 {
     @apply mx-auto p-2 text-center text-2xl;
   }
