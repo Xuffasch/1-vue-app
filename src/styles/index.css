@@ -3,7 +3,7 @@ body.home {
 }
 
 body.list {
-    @apply bg-gray-400;
+    @apply bg-gray-200;
 }
 
 body.versus {
@@ -19,5 +19,5 @@ nav.versus {
 }
 
 nav.list {
-    @apply text-red-300;
+    @apply text-red-700;
 }
