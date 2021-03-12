@@ -15,8 +15,7 @@
   import HelloList from '../components/HelloList.vue'
   import { HelloComment, Hello } from '../types'
 
-  import { useStore } from 'vuex'
-  import { key } from '../store/viteStore'
+  import { useStore } from '../store/viteStore'
 
   export default defineComponent({
     name: 'Home',
@@ -34,7 +33,7 @@
         ? new Worker('/logging.js')
         : null
 
-      const commentStore = useStore(key)
+      const commentStore = useStore()
 
       return {
         message,

@@ -1,5 +1,5 @@
 import { InjectionKey } from 'vue'
-import { createStore, Store } from 'vuex'
+import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import { HelloComment } from '../types'
 
 export interface State {
@@ -26,3 +26,7 @@ export const store = createStore<State>({
     },
   },
 })
+
+export function useStore(): Store<State> {
+  return baseUseStore(key)
+}
