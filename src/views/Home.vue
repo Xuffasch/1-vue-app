@@ -1,6 +1,7 @@
 <template>
   <HelloWorld :input="message" />
-  <HelloList :hellos="comments" />
+  <!-- <HelloList :hellos="comments" /> -->
+  <HelloList />
   <HelloForm @hello-sent="receivedHello" />
 </template>
 
@@ -13,6 +14,9 @@
   import HelloForm from '../components/HelloForm.vue'
   import HelloList from '../components/HelloList.vue'
   import { HelloComment, Hello } from '../types'
+
+  import { useStore } from 'vuex'
+  import { key } from '../store/viteStore'
 
   export default defineComponent({
     name: 'Home',
@@ -30,11 +34,14 @@
         ? new Worker('/logging.js')
         : null
 
+      const commentStore = useStore(key)
+
       return {
         message,
         comments,
         addComment,
         worker,
+        commentStore,
       }
     },
     beforeCreate: function () {
@@ -49,10 +56,8 @@
     },
     methods: {
       receivedHello(hello: HelloComment) {
-        console.log('Received Hello Content : ', hello)
-        console.log('Worker instance', this.worker)
         this.worker?.postMessage({ action: 'hello' })
-        this.addComment(hello)
+        this.commentStore.commit('addComment', hello)
       },
     },
   })

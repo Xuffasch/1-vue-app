@@ -10,6 +10,9 @@
       <option>Bored !</option>
     </select>
 
+    <label for="name">Name</label>
+    <input id="name" v-model="name" type="text" />
+
     <input type="submit" value="Submit" />
   </form>
 </template>
@@ -23,6 +26,7 @@
       return {
         comment: '' as string,
         feeling: '' as string,
+        name: '' as string,
       }
     },
     methods: {
@@ -30,11 +34,13 @@
         let hello = {
           comment: this.comment,
           feeling: this.feeling,
+          name: this.name,
         } as HelloComment
         this.$emit('hello-sent', hello)
 
         this.comment = ''
         this.feeling = ''
+        this.name = ''
       },
     },
   })

@@ -2,6 +2,7 @@ export interface Hello {
   msg: string
 }
 export interface HelloComment {
+  name: string
   comment: string
   feeling: string
 }
