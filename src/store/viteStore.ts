@@ -2,6 +2,8 @@ import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import { HelloComment } from '../types'
 
+import createPersistedState from 'vuex-persistedstate'
+
 export interface State {
   comments: Array<HelloComment>
 }
@@ -25,6 +27,7 @@ export const store = createStore<State>({
       return state.comments
     },
   },
+  plugins: [createPersistedState()],
 })
 
 export function useStore(): Store<State> {
