@@ -2,12 +2,12 @@
   <h1>Versus Page</h1>
   <div class="versus">
     <img
-      src="../../versus/star-wars-kylo-ren-lightsaber-figurine.jpg"
+      src="/versus/star-wars-kylo-ren-lightsaber-figurine.jpg"
       alt="kylo ren figurine with a lightsaber"
     />
     <div class="text-2xl text-albumBlue">Versus</div>
     <img
-      src="../../versus/star-wars-anakin-skywalker-lightsaber-figurine.jpg"
+      src="/versus/star-wars-anakin-skywalker-lightsaber-figurine.jpg"
       alt="anakin skywalker figurine with a lightsaber"
     />
   </div>
