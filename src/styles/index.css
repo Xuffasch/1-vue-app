@@ -11,13 +11,13 @@ body.versus {
 }
 
 nav.home {
-    @apply text-white;
+    @apply text-white bg-yellow-400;
 }
 
 nav.versus {
-    @apply text-albumBlue;
+    @apply text-albumBlue bg-white;
 }
 
 nav.list {
-    @apply text-red-700;
+    @apply text-red-700 bg-gray-200;
 }

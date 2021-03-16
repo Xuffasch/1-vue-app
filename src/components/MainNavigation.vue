@@ -33,7 +33,7 @@
 
 <style>
   nav {
-    @apply sticky top-0 flex justify-between mx-auto bg-transparent;
+    @apply sticky top-0 w-full flex justify-between mx-auto bg-transparent;
   }
   nav ul {
     @apply flex justify-center;

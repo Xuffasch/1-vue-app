@@ -45,7 +45,7 @@
     },
     beforeCreate: function () {
       document.body.className = 'home'
-      let nav = document.getElementsByTagName('NAV')[0]
+      let nav = document.getElementsByTagName('nav')[0]
       nav.className = 'home'
     },
     mounted() {

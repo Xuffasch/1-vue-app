@@ -13,7 +13,7 @@
     name: 'List',
     beforeCreate: function () {
       document.body.className = 'list'
-      let nav = document.getElementsByTagName('NAV')[0]
+      let nav = document.getElementsByTagName('nav')[0]
       nav.className = 'list'
     },
   })
